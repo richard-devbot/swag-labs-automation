@@ -18,14 +18,13 @@ The scope of automation testing includes:
 - Regression testing of all modules.
 
 ## Automation tool
-The automation tool selected for this project is Cypress version ~12.8.1~ 12.9.0 (last version in the creation of the project) with programming
-language javascript.
+The automation tool selected for this project is Selenium version 4.8.3 with programming language python.
 
 ## Test environment
 The test environment for automation testing is as follows:
 - Operating system: Ubuntu 22.04.2 LTS (Jammy Jellyfish)
-- Browser: ~Google Chrome v111~ Electron v106 will be use due firing load event problems in Google Chrome v111
-- Programming language: javascript
+- Browser: Google Chrome Version 112.0.5615.49
+- Programming language: python
 - Integrated Development Environment: VS Code
 
 ## Test cases
