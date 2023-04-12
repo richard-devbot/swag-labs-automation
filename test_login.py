@@ -5,7 +5,7 @@ import unittest
 
 from login_page import Login_Page
 
-class LoginPage(unittest.TestCase):
+class Test_Login(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
