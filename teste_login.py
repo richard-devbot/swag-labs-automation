@@ -13,14 +13,27 @@ class LoginPage(unittest.TestCase):
         self.login_page = Login_Page(self.driver)
 
     def test_login_locked(self):
-        self.login_page.set_login("locked_out_user")
-        self.login_page.set_password("secret_sauce")
-        self.login_page.click_login_button()
-
+        self.login_page.complete_login("locked_out_user", "secret_sauce")
+        
         self.assertEqual(
             self.driver.find_element(By.XPATH, '//h3[@data-test="error"]').text, 
             "Epic sadface: Sorry, this user has been locked out.",
             "Error message of locked user is incorrect."
+        )
+
+    def test_login_pass(self):
+        self.login_page.complete_login("standard_user", "secret_sauce")
+
+        self.assertEqual(
+            self.driver.find_element(By.XPATH, '//div[@class="app_logo"]').text,
+            "Swag Labs",
+            "App name is not displayed correctly."
+        )
+
+        self.assertEqual(
+            self.driver.current_url,
+            'https://www.saucedemo.com/inventory.html',
+            'Login did not redirect correctly.'
         )
 
     def tearDown(self):

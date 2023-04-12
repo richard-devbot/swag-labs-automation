@@ -12,3 +12,8 @@ class Login_Page:
 
     def click_login_button(self):
         self.dsl.click_element_by_id("login-button")
+
+    def complete_login(self, username, password):
+        self.dsl.insert_text_by_id("user-name", username)
+        self.dsl.insert_text_by_id("password", password)
+        self.dsl.click_element_by_id("login-button")
