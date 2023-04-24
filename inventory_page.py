@@ -32,3 +32,25 @@ class Inventory_Page:
 
     def access_cart(self):
         self.dsl.click_element_by_class('shopping_cart_link')
+
+    def go_to_checkout(self):
+        self.dsl.click_element_by_xpath('//button[@id="checkout"]')
+
+    # checkout
+    def set_first_name(self, first_name):
+        self.dsl.insert_text_by_id('first-name', first_name)
+
+    def set_last_name(self, last_name):
+        self.dsl.insert_text_by_id('last-name', last_name)
+
+    def set_zip_postal_code(self, zip_postal_code):
+        self.dsl.insert_text_by_id('postal-code', zip_postal_code)
+
+    def continue_to_checkout_overview(self):
+        self.dsl.click_element_by_id('continue')
+
+    def fulfill_checkout_informantion(self, first_name, last_name, zip_postal_code):
+        self.set_first_name(first_name)
+        self.set_last_name(last_name)
+        self.set_zip_postal_code(zip_postal_code)
+        self.continue_to_checkout_overview()

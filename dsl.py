@@ -48,3 +48,7 @@ class DSL:
     def get_visible_text_selected(self, xpath_locator):
         select = Select(self.driver.find_element(By.XPATH, xpath_locator))
         return select.first_selected_option.text
+    
+    # checkout
+    def get_text_by_class(self, class_locator):
+        return self.driver.find_element(By.CLASS_NAME, class_locator).text

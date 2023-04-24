@@ -9,6 +9,7 @@ class Test_Login(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
         self.driver.get("https://www.saucedemo.com/")
         self.login_page = Login_Page(self.driver)
 

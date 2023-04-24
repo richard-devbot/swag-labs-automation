@@ -10,6 +10,7 @@ class Test_Product(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
         self.driver.get("https://www.saucedemo.com/")
         self.login_page = Login_Page(self.driver)
         self.login_page.complete_login("standard_user", "secret_sauce")
