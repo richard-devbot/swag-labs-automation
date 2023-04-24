@@ -55,6 +55,7 @@ class Test_Product(unittest.TestCase):
 
         self.assertEqual(self.inventory_page.get_sort_type_text(), 'Price (high to low)', 'Order is not the selected one.')
         self.assertListEqual(items_prices, sorted_reverse_items_prices, "Items are not correctly ordered by price (high to low).")
+        self.assertEqual('String', 'Another String', 'Sample assert error.')
 
     def tearDown(self):
         self.driver.quit()
