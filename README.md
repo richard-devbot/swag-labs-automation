@@ -1,8 +1,12 @@
 # Swag Labs Test Automation
 
-## Screen record
+## Screen record of tests running
 
 ![](record_test_automation_swag_labs.gif)
+
+## HtmlTestRunner Report Sample
+
+![](HtmlTestRunner_report_sample.png)
 
 ## Automation Test Plan
 
