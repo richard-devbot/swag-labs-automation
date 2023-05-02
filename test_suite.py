@@ -2,9 +2,9 @@ import unittest
 
 from HtmlTestRunner import HTMLTestRunner
 
-from test_login import Test_Login
-from test_product_sort import Test_Product
-from test_checkout import Test_Checkout
+from test_objects.test_login import Test_Login
+from test_objects.test_product_sort import Test_Product
+from test_objects.test_checkout import Test_Checkout
 
 def suite_general():
     suite = unittest.TestSuite()

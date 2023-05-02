@@ -2,7 +2,7 @@
 
 ## Screen record
 
-![](record_test_automation_swag_labs.gif)
+![](samples/record_test_automation_swag_labs.gif)
 
 ## Automation Test Plan
 

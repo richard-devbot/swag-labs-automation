@@ -4,9 +4,9 @@ from selenium.webdriver.common.by import By
 import unittest
 import random
 
-from login_page import Login_Page
-from inventory_page import Inventory_Page
-from checkout_page import Checkout_Page
+from page_objects.login_page import Login_Page
+from page_objects.inventory_page import Inventory_Page
+from page_objects.checkout_page import Checkout_Page
 
 class Test_Checkout(unittest.TestCase):
 

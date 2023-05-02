@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 import unittest
 
-from login_page import Login_Page
+from page_objects.login_page import Login_Page
 
 class Test_Login(unittest.TestCase):
 

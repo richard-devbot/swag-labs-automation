@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 
 import unittest
 
-from login_page import Login_Page
-from inventory_page import Inventory_Page
+from page_objects.login_page import Login_Page
+from page_objects.inventory_page import Inventory_Page
 
 class Test_Product(unittest.TestCase):
 
