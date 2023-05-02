@@ -1,9 +1,7 @@
-import sys
 import unittest
 
 from HtmlTestRunner import HTMLTestRunner
 
-sys.path.append("..")
 from test_objects import test_login, test_product_sort, test_checkout
 
 def suite_general():

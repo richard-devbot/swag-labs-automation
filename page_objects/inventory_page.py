@@ -1,4 +1,4 @@
-from dsl import DSL
+from dsl.dsl import DSL
 
 class Inventory_Page:
     def __init__(self, driver):

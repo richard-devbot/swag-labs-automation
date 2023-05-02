@@ -1,4 +1,4 @@
-from dsl import DSL
+from dsl.dsl import DSL
 
 import re
 

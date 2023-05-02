@@ -1,4 +1,4 @@
-from dsl import DSL
+from dsl.dsl import DSL
 
 class Login_Page:
     def __init__(self, driver):
