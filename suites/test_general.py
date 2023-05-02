@@ -1,17 +1,17 @@
+import sys
 import unittest
 
 from HtmlTestRunner import HTMLTestRunner
 
-from test_objects.test_login import Test_Login
-from test_objects.test_product_sort import Test_Product
-from test_objects.test_checkout import Test_Checkout
+sys.path.append("..")
+from test_objects import test_login, test_product_sort, test_checkout
 
 def suite_general():
     suite = unittest.TestSuite()
 
-    suite.addTest(unittest.makeSuite(Test_Login))
-    suite.addTest(unittest.makeSuite(Test_Product))
-    suite.addTest(unittest.makeSuite(Test_Checkout))
+    suite.addTest(unittest.makeSuite(test_login.Test_Login))
+    suite.addTest(unittest.makeSuite(test_product_sort.Test_Product))
+    suite.addTest(unittest.makeSuite(test_checkout.Test_Checkout))
 
     return suite
 

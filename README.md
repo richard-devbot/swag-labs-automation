@@ -6,7 +6,7 @@
 
 ## HtmlTestRunner Report Sample
 
-![](HtmlTestRunner_report_sample.png)
+![](samples/HtmlTestRunner_report_sample.png)
 
 ## Automation Test Plan
 
