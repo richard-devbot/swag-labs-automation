@@ -14,8 +14,8 @@ def suite_general():
     return suite
 
 if __name__ == '__main__':
-    runner = unittest.TextTestRunner()
-    runner = runner.run(suite_general())
+    runner = unittest.TextTestRunner(verbosity=2)
+    result = runner.run(suite_general())
     # runner = HTMLTestRunner(
     #     combine_reports=True,
     #     report_title='Swag Labs Test Automation Reports',
