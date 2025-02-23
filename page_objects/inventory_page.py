@@ -17,7 +17,8 @@ class Inventory_Page:
         return self.dsl.get_items_prices("inventory_item_price")[index]
     
     def add_item_to_cart_by_index(self, index):
-        self.dsl.get_buttons_list_by_xpath('//div[@class="inventory_item"]//button')[index].click()
+        # Intentionally changed XPath to cause failure
+        self.dsl.get_buttons_list_by_xpath('//div[@class="inventory_item_WRONG"]//button')[index].click()
     
     def select_sort_type_by_text(self, visible_text_option):
         # Changed data-test attribute to trigger failure
