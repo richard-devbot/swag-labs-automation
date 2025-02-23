@@ -20,11 +20,13 @@ class Inventory_Page:
         self.dsl.get_buttons_list_by_xpath('//div[@class="inventory_item"]//button')[index].click()
     
     def select_sort_type_by_text(self, visible_text_option):
-        self.dsl.select_by_visible_text('//select[@data-test="product_sort_container"]', visible_text_option)
-
-    def get_sort_type_text(self):
-        return self.dsl.get_visible_text_selected('//select[@data-test="product_sort_container"]')
+        # Changed data-test attribute to trigger failure
+        self.dsl.select_by_visible_text('//select[@data-test="product_sort_container_changed"]', visible_text_option)
     
+    def get_sort_type_text(self):
+        # Changed data-test attribute to trigger failure
+        return self.dsl.get_visible_text_selected('//select[@data-test="product_sort_container_changed"]')
+        
     def reset_app_state(self):
         self.dsl.click_element_by_id('react-burger-menu-btn')
         self.dsl.click_element_by_id('reset_sidebar_link')
