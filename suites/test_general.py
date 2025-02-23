@@ -1,6 +1,6 @@
 import unittest
 
-from HtmlTestRunner import HTMLTestRunner
+# from HtmlTestRunner import HTMLTestRunner
 
 from test_objects import test_login, test_product_sort, test_checkout
 
@@ -14,10 +14,11 @@ def suite_general():
     return suite
 
 if __name__ == '__main__':
-    # runner = unittest.TextTestRunner()
-    runner = HTMLTestRunner(
-        combine_reports=True,
-        report_title='Swag Labs Test Automation Reports',
-        open_in_browser=True
-    )
-    runner.run(suite_general())
+    runner = unittest.TextTestRunner()
+    runner = runner.run(suite_general())
+    # runner = HTMLTestRunner(
+    #     combine_reports=True,
+    #     report_title='Swag Labs Test Automation Reports',
+    #     open_in_browser=True
+    # )
+    # runner.run(suite_general())
