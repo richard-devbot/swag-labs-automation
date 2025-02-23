@@ -57,6 +57,15 @@ class Test_Product(unittest.TestCase):
         self.assertListEqual(items_prices, sorted_reverse_items_prices, "Items are not correctly ordered by price (high to low).")
         self.assertEqual('String', 'Another String', 'Sample assert error.')
 
+    def test_add_to_cart(self):
+        """Test adding a product to cart"""
+        # Add first product to cart
+        self.inventory_page.add_item_to_cart_by_index(0)
+        
+        # Verify cart badge shows 1 item
+        cart_badge = self.driver.find_element(By.CLASS_NAME, "shopping_cart_badge")
+        self.assertEqual(cart_badge.text, "1", "Cart badge should show 1 item")
+
     def tearDown(self):
         self.driver.quit()
 
